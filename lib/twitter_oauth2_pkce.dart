@@ -3,4 +3,4 @@
 // modification, are permitted provided the conditions.
 
 export 'package:twitter_oauth2_pkce/src/scope.dart';
-export 'package:twitter_oauth2_pkce/src/twitter_oauth2_client.dart';
+export 'package:twitter_oauth2_pkce/src/twitter_oauth2.dart';
