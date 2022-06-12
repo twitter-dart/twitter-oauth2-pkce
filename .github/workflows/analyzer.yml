@@ -20,4 +20,4 @@ jobs:
     - name: install dependencies
       run: flutter pub get
     - name: analyzer
-      run: flutter analyze --fatal-infos --fatal-warnings .
+      run: flutter analyze --fatal-infos --fatal-warnings ./lib
