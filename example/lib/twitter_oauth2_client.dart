@@ -2,12 +2,9 @@
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided the conditions.
 
-// Package imports:
+import 'package:example/scope.dart';
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
-
-// Project imports:
-import 'package:twitter_oauth2_pkce/src/scope.dart';
 
 class TwitterOAuth2 {
   TwitterOAuth2({
