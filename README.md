@@ -26,7 +26,6 @@
 [![Last Commits](https://img.shields.io/github/last-commit/twitter-dart/twitter-oauth2-pkce?logo=git&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/commits/main)
 [![License](https://img.shields.io/github/license/twitter-dart/twitter-oauth2-pkce?logo=open-source-initiative&logoColor=green)](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/CODE_OF_CONDUCT.md)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftwitter-dart%2Ftwitter-oauth2-pkce.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftwitter-dart%2Ftwitter-oauth2-pkce?ref=badge_shield)
 
 ---
 
