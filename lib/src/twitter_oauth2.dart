@@ -27,12 +27,12 @@ abstract class TwitterOAuth2 {
     required List<Scope> scopes,
   });
 
-  Future<AccessTokenResponse> refreshBearerToken({
-    required String bearerToken,
+  Future<AccessTokenResponse> refreshAccessToken({
+    required String refreshToken,
     required List<Scope> scopes,
   });
 
-  Future<void> revokeBearerToken({
+  Future<void> revokeAccessToken({
     required AccessTokenResponse accessTokenResponse,
   });
 
@@ -77,19 +77,19 @@ class _TwitterOAuth2 implements TwitterOAuth2 {
       );
 
   @override
-  Future<AccessTokenResponse> refreshBearerToken({
-    required String bearerToken,
+  Future<AccessTokenResponse> refreshAccessToken({
+    required String refreshToken,
     required List<Scope> scopes,
   }) async =>
       await _client.refreshToken(
-        bearerToken,
+        refreshToken,
         clientId: clientId,
         clientSecret: clientSecret,
         scopes: scopes.map((scope) => scope.value).toList(),
       );
 
   @override
-  Future<void> revokeBearerToken({
+  Future<void> revokeAccessToken({
     required AccessTokenResponse accessTokenResponse,
   }) async =>
       await _client.revokeAccessToken(

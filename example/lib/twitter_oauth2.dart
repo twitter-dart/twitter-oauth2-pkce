@@ -2,9 +2,11 @@
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided the conditions.
 
+// Package imports:
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 
+// Project imports:
 import 'scope.dart';
 
 abstract class TwitterOAuth2 {
@@ -25,12 +27,12 @@ abstract class TwitterOAuth2 {
     required List<Scope> scopes,
   });
 
-  Future<AccessTokenResponse> refreshBearerToken({
-    required String bearerToken,
+  Future<AccessTokenResponse> refreshAccessToken({
+    required String refreshToken,
     required List<Scope> scopes,
   });
 
-  Future<void> revokeBearerToken({
+  Future<void> revokeAccessToken({
     required AccessTokenResponse accessTokenResponse,
   });
 
@@ -75,19 +77,19 @@ class _TwitterOAuth2 implements TwitterOAuth2 {
       );
 
   @override
-  Future<AccessTokenResponse> refreshBearerToken({
-    required String bearerToken,
+  Future<AccessTokenResponse> refreshAccessToken({
+    required String refreshToken,
     required List<Scope> scopes,
   }) async =>
       await _client.refreshToken(
-        bearerToken,
+        refreshToken,
         clientId: clientId,
         clientSecret: clientSecret,
         scopes: scopes.map((scope) => scope.value).toList(),
       );
 
   @override
-  Future<void> revokeBearerToken({
+  Future<void> revokeAccessToken({
     required AccessTokenResponse accessTokenResponse,
   }) async =>
       await _client.revokeAccessToken(

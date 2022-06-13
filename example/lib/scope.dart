@@ -4,7 +4,7 @@
 
 /// Scopes allow you to set granular access for your App so that your App only
 /// has the permissions that it needs. To learn more about what scopes map to
-/// what endpoints, view [authentication mapping guide](https://developer.twitter.com/en/docs/authentication/guides/v2-authentication-mapping).
+/// what endpoints, see [authentication mapping guide](https://developer.twitter.com/en/docs/authentication/guides/v2-authentication-mapping).
 enum Scope {
   /// All the Tweets you can view, including Tweets from protected accounts.
   tweetRead('tweet.read'),

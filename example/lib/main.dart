@@ -14,7 +14,7 @@ class Example extends StatefulWidget {
 }
 
 class _ExampleState extends State<Example> {
-  String? _bearerToken;
+  String? _accessToken;
   String? _refreshToken;
 
   @override
@@ -24,8 +24,8 @@ class _ExampleState extends State<Example> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('$_bearerToken'),
-              Text('$_refreshToken'),
+              Text('Access Token: $_accessToken'),
+              Text('Refresh Token: $_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
                   final oauth2 = TwitterOAuth2(
@@ -40,7 +40,7 @@ class _ExampleState extends State<Example> {
                   );
 
                   super.setState(() {
-                    _bearerToken = response.accessToken;
+                    _accessToken = response.accessToken;
                     _refreshToken = response.refreshToken;
                   });
                 },
