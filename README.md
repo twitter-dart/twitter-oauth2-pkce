@@ -100,7 +100,7 @@ You can see details [here](https://github.com/twitter-dart/twitter-oauth2-pkce/b
 
 ### 1.1.4. Implementation
 
-Now all that's left is to launch the following reference Flutter app and press the button to start the approval process with **OAuth 2.0 PKCE**!
+Now all that's left is to launch the following example Flutter app and press the button to start the approval process with **OAuth 2.0 PKCE**!
 
 After pressing the `Authorize` button, a redirect will be performed and you will see that you have obtained your bearer token and refresh token.
 
