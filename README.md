@@ -37,9 +37,10 @@
     - [1.1.1. Install Library](#111-install-library)
     - [1.1.2. Import](#112-import)
     - [1.1.3. Implementation](#113-implementation)
-  - [1.2. Support ❤️](#12-support-️)
-  - [1.3. License 🔑](#13-license-)
-  - [1.4. More Information 🧐](#14-more-information-)
+  - [1.2. Contribution 🏆](#12-contribution-)
+  - [1.3. Support ❤️](#13-support-️)
+  - [1.4. License 🔑](#14-license-)
+  - [1.5. More Information 🧐](#15-more-information-)
 
 <!-- /TOC -->
 
@@ -75,7 +76,28 @@ import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce';
 
 ### 1.1.3. Implementation
 
-## 1.2. Support ❤️
+## 1.2. Contribution 🏆
+
+If you would like to contribute to `twitter-oauth2-pkce`, please create an [issue](https://github.com/twitter-dart/twitter-oauth2-pkce/issues) or create a Pull Request.
+
+There are many ways to contribute to the OSS. For example, the following subjects can be considered:
+
+- There are scopes that are not implemented.
+- Documentation is outdated or incomplete.
+- Have a better way or idea to achieve the functionality.
+- etc...
+
+You can see more details from resources below:
+
+- [Contributor Covenant Code of Conduct](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/CODE_OF_CONDUCT.md)
+- [Contribution Guidelines](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/CONTRIBUTING.md)
+- [Style Guide](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/STYLEGUIDE.md)
+
+Or you can create a [discussion](https://github.com/twitter-dart/twitter-oauth2-pkce/discussions) if you like.
+
+**Feel free to join this development, diverse opinions make software better!**
+
+## 1.3. Support ❤️
 
 The simplest way to show us your support is by **giving the project a star** at [GitHub](https://github.com/twitter-dart/twitter-oauth2-pkce) and [Pub.dev](https://pub.dev/packages/twitter_oauth2_pkce).
 
@@ -89,7 +111,7 @@ You can also support this project by **becoming a sponsor** on GitHub:
   </p>
 </div>
 
-## 1.3. License 🔑
+## 1.4. License 🔑
 
 All resources of `twitter_oauth2_pkce` is provided under the `BSD-3` license.
 
@@ -98,7 +120,7 @@ All resources of `twitter_oauth2_pkce` is provided under the `BSD-3` license.
 > **Note**</br>
 > License notices in the source are strictly validated based on `.github/header-checker-lint.yml`. Please check [header-checker-lint.yml](https://github.com/twitter-dart/twitter-oauth2-pkce/tree/main/.github/header-checker-lint.yml) for the permitted standards.
 
-## 1.4. More Information 🧐
+## 1.5. More Information 🧐
 
 `twitter_oauth2_pkce` was designed and implemented by **_Kato Shinya ([@myConsciousness](https://github.com/myConsciousness))_**.
 
