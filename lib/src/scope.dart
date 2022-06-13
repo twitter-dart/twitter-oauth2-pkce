@@ -42,7 +42,8 @@ enum Scope {
   /// Like and un-like Tweets for you.
   likeWrite('like.write'),
 
-  /// Lists, list members, and list followers of lists you’ve created or are a member of, including private lists.
+  /// Lists, list members, and list followers of lists you’ve created or are a
+  /// member of, including private lists.
   listRead('list.read'),
 
   /// Create and manage Lists for you.
