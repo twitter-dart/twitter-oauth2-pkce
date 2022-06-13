@@ -77,7 +77,7 @@ import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce';
 
 ### 1.1.3. Setup
 
-At first to test with this library, let's set `org.example.android.oauth://callback/` as callback URI in your [Twitter Developers](https://developer.twitter.com/en)' portal.
+At first to test with this library, let's set `org.example.android.oauth://callback/` as a callback URI in your [Twitter Developers](https://developer.twitter.com/en)' portal.
 
 ![Set Callback URI](https://user-images.githubusercontent.com/13072231/173305324-14b3f7df-2606-4a5d-a348-80021a28d748.png)
 
@@ -95,6 +95,8 @@ In Android, it's necessary to add the following definitions to `AndroidManifest.
     </intent-filter>
 </activity>
 ```
+
+You can see details [here](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/example/android/app/src/main/AndroidManifest.xml).
 
 ### 1.1.4. Implementation
 
