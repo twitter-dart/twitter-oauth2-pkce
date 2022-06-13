@@ -35,7 +35,9 @@
   - [1.1. Getting Started ⚡](#11-getting-started-)
     - [1.1.1. Install Library](#111-install-library)
     - [1.1.2. Import](#112-import)
-    - [1.1.3. Implementation](#113-implementation)
+    - [1.1.3. Setup](#113-setup)
+      - [1.1.3.1. Android](#1131-android)
+    - [1.1.4. Implementation](#114-implementation)
   - [1.2. Contribution 🏆](#12-contribution-)
   - [1.3. Support ❤️](#13-support-️)
   - [1.4. License 🔑](#14-license-)
@@ -73,7 +75,90 @@ We recommend using this library in combination with the **[twitter_api_v2](https
 import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce';
 ```
 
-### 1.1.3. Implementation
+### 1.1.3. Setup
+
+At first to test with this library, let's set `org.example.android.oauth://callback/` as callback URI in your [Twitter Developers](https://developer.twitter.com/en)' portal.
+
+![Set Callback URI](https://user-images.githubusercontent.com/13072231/173305324-14b3f7df-2606-4a5d-a348-80021a28d748.png)
+
+#### 1.1.3.1. Android
+
+In Android, it's necessary to add the following definitions to `AndroidManifest.xml`.
+
+```xml
+<activity android:name="com.linusu.flutter_web_auth.CallbackActivity" android:exported="true">
+    <intent-filter android:label="flutter_web_auth">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="org.example.android.oauth" android:host="callback" />
+    </intent-filter>
+</activity>
+```
+
+### 1.1.4. Implementation
+
+Now all that's left is to launch the following reference Flutter app and press the button to start the approval process with **OAuth 2.0 PKCE**!
+
+After pressing the `Authorize` button, a redirect will be performed and you will see that you have obtained your bearer token and refresh token.
+
+```dart
+import 'package:example/scope.dart';
+import 'package:example/twitter_oauth2.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(home: Example()));
+}
+
+class Example extends StatefulWidget {
+  const Example({Key? key}) : super(key: key);
+
+  @override
+  State<Example> createState() => _ExampleState();
+}
+
+class _ExampleState extends State<Example> {
+  String? _bearerToken;
+  String? _refreshToken;
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('$_bearerToken'),
+              Text('$_refreshToken'),
+              ElevatedButton(
+                onPressed: () async {
+                  final oauth2 = TwitterOAuth2(
+                    // Client ID and Client Secret obtained from Twitter Developers.
+                    clientId: 'YOUR_CLIENT_ID',
+                    clientSecret: 'YOUR_CLIENT_SECRET',
+                    // Match the URI set in Twitter Developers.
+                    redirectUri: 'org.example.android.oauth://callback/',
+                    customUriScheme: 'org.example.android.oauth',
+                  );
+
+                  final response = await oauth2.executeAuthCodeFlowWithPKCE(
+                    scopes: Scope.values,
+                  );
+
+                  super.setState(() {
+                    _bearerToken = response.accessToken;
+                    _refreshToken = response.refreshToken;
+                  });
+                },
+                child: const Text('Push!'),
+              )
+            ],
+          ),
+        ),
+      );
+}
+```
 
 ## 1.2. Contribution 🏆
 
