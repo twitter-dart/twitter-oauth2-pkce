@@ -77,7 +77,7 @@ import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce';
 
 ### 1.1.3. Setup
 
-At first to test with this library, let's set `org.example.android.oauth://callback/` as a callback URI in your [Twitter Developers](https://developer.twitter.com/en)' portal.
+At first to test with this library, let's set `org.example.android.oauth://callback/` as a callback URI in your [Twitter Developer](https://developer.twitter.com/en)'s portal.
 
 ![Set Callback URI](https://user-images.githubusercontent.com/13072231/173305324-14b3f7df-2606-4a5d-a348-80021a28d748.png)
 
