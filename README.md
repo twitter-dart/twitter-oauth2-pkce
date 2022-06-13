@@ -22,7 +22,6 @@
 [![Issues](https://img.shields.io/github/issues/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/pulls)
 [![Stars](https://img.shields.io/github/stars/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce)
-[![Contributors](https://img.shields.io/github/contributors/twitter-dart/twitter-oauth2-pkce)](https://github.com/twitter-dart/twitter-oauth2-pkce/graphs/contributors)
 [![Code size](https://img.shields.io/github/languages/code-size/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce)
 [![Last Commits](https://img.shields.io/github/last-commit/twitter-dart/twitter-oauth2-pkce?logo=git&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/commits/main)
 [![License](https://img.shields.io/github/license/twitter-dart/twitter-oauth2-pkce?logo=open-source-initiative&logoColor=green)](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/LICENSE)
