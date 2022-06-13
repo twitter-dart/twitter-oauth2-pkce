@@ -3,7 +3,6 @@
    <application
         android:label="example"
         android:name="${applicationName}"
-        android:launchMode="singleTask"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
