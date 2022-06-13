@@ -1,22 +1,9 @@
 import 'package:example/scope.dart';
-import 'package:example/twitter_oauth2_client.dart';
+import 'package:example/twitter_oauth2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      home: Example(),
-    );
-  }
+  runApp(const MaterialApp(home: Example()));
 }
 
 class Example extends StatefulWidget {
@@ -27,23 +14,35 @@ class Example extends StatefulWidget {
 }
 
 class _ExampleState extends State<Example> {
+  String? _bearerToken;
+  String? _refreshToken;
+
   @override
   Widget build(BuildContext context) => Scaffold(
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text('$_bearerToken'),
+              Text('$_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
-                  final TwitterOAuth2 oauth2 = TwitterOAuth2(
+                  final oauth2 = TwitterOAuth2(
+                    clientId: 'YOUR_CLIENT_ID',
+                    clientSecret: 'YOUR_CLIENT_SECRET',
                     redirectUri: 'org.example.android.oauth://callback/',
                     customUriScheme: 'org.example.android.oauth',
                   );
 
-                  await oauth2.generateTokenWithPKCE(
-                    clientId: 'YOUR_CLIENT_ID',
-                    clientSecret: 'YOUR_CLIENT_SECRET',
+                  final response = await oauth2.executeAuthCodeFlowWithPKCE(
                     scopes: Scope.values,
                   );
+
+                  super.setState(() {
+                    _bearerToken = response.accessToken;
+                    _refreshToken = response.refreshToken;
+                  });
                 },
                 child: const Text('Push!'),
               )
