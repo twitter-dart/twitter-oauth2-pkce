@@ -123,9 +123,9 @@ Now all that's left is to launch the following example Flutter app and press the
 After pressing the `Authorize` button, a redirect will be performed and you will see that you have obtained your bearer token and refresh token.
 
 ```dart
-import 'package:example/scope.dart';
-import 'package:example/twitter_oauth.dart';
 import 'package:flutter/material.dart';
+
+import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce.dart';
 
 void main() {
   runApp(const MaterialApp(home: Example()));
