@@ -12,17 +12,15 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'auth/base_web_auth.dart';
-import 'response/authorization_response.dart';
-import 'response/oauth_response.dart';
-import 'scope.dart';
-import 'twitter_oauth_exception.dart';
-
 import 'auth/web_auth.dart'
     // ignore: uri_does_not_exist
     if (dart.library.io) 'auth/io_web_auth.dart'
     // ignore: uri_does_not_exist
     if (dart.library.html) 'auth/browser_web_auth.dart';
-
+import 'response/authorization_response.dart';
+import 'response/oauth_response.dart';
+import 'scope.dart';
+import 'twitter_oauth_exception.dart';
 
 class TwitterOAuth {
   TwitterOAuth({
