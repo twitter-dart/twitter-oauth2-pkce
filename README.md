@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <b>The Easiest Way to Authenticate with OAuth 2.0 PKCE for Twitter API 🐦</b>
+  <b>The Optimized and Easiest Way to Authenticate with OAuth 2.0 PKCE for Twitter API 🐦</b>
 </p>
 
 ---
@@ -37,6 +37,7 @@
     - [1.1.2. Import](#112-import)
     - [1.1.3. Setup](#113-setup)
       - [1.1.3.1. Android](#1131-android)
+      - [1.1.3.2. iOS](#1132-ios)
     - [1.1.4. Implementation](#114-implementation)
   - [1.2. Contribution 🏆](#12-contribution-)
   - [1.3. Support ❤️](#13-support-️)
@@ -83,7 +84,16 @@ At first to test with this library, let's set `org.example.android.oauth://callb
 
 #### 1.1.3.1. Android
 
-In Android, it's necessary to add the following definitions to `AndroidManifest.xml`.
+On Android you must first set the minSdkVersion in the ***build.gradle*** file:
+
+```gradle
+defaultConfig {
+   ...
+   minSdkVersion 18
+   ...
+```
+
+Also it's necessary to add the following definitions to `AndroidManifest.xml`.
 
 ```xml
 <activity android:name="com.linusu.flutter_web_auth.CallbackActivity" android:exported="true">
@@ -98,6 +108,14 @@ In Android, it's necessary to add the following definitions to `AndroidManifest.
 
 You can see details [here](https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/example/android/app/src/main/AndroidManifest.xml).
 
+#### 1.1.3.2. iOS
+
+On iOS you need to set the platform in the ***ios/Podfile*** file:
+
+```profile
+platform :ios, '11.0'
+```
+
 ### 1.1.4. Implementation
 
 Now all that's left is to launch the following example Flutter app and press the button to start the approval process with **OAuth 2.0 PKCE**!
@@ -106,7 +124,7 @@ After pressing the `Authorize` button, a redirect will be performed and you will
 
 ```dart
 import 'package:example/scope.dart';
-import 'package:example/twitter_oauth2.dart';
+import 'package:example/twitter_oauth.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -121,7 +139,7 @@ class Example extends StatefulWidget {
 }
 
 class _ExampleState extends State<Example> {
-  String? _bearerToken;
+  String? _accessToken;
   String? _refreshToken;
 
   @override
@@ -135,16 +153,14 @@ class _ExampleState extends State<Example> {
               Text('Refresh Token: $_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
-                  final oauth2 = TwitterOAuth2(
-                    // Client ID and Client Secret obtained from Twitter Developers.
+                  final oauth = TwitterOAuth(
                     clientId: 'YOUR_CLIENT_ID',
                     clientSecret: 'YOUR_CLIENT_SECRET',
-                    // Match the URI set in Twitter Developers.
                     redirectUri: 'org.example.android.oauth://callback/',
                     customUriScheme: 'org.example.android.oauth',
                   );
 
-                  final response = await oauth2.executeAuthCodeFlowWithPKCE(
+                  final response = await oauth.executeAuthCodeFlowWithPKCE(
                     scopes: Scope.values,
                   );
 

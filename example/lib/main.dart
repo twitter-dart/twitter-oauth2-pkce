@@ -28,14 +28,14 @@ class _ExampleState extends State<Example> {
               Text('Refresh Token: $_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
-                  final oauth2 = TwitterOAuth(
+                  final oauth = TwitterOAuth(
                     clientId: 'YOUR_CLIENT_ID',
                     clientSecret: 'YOUR_CLIENT_SECRET',
                     redirectUri: 'org.example.android.oauth://callback/',
                     customUriScheme: 'org.example.android.oauth',
                   );
 
-                  final response = await oauth2.executeAuthCodeFlowWithPKCE(
+                  final response = await oauth.executeAuthCodeFlowWithPKCE(
                     scopes: Scope.values,
                   );
 
