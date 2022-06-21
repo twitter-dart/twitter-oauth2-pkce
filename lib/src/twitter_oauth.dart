@@ -82,9 +82,9 @@ class TwitterOAuth {
   }
 
   Future<OAuthResponse> revokeToken(OAuthResponse oauthResponse) async {
-    await revokeAccessToken(oauthResponse);
+    await _revokeAccessToken(oauthResponse);
 
-    return await revokeRefreshToken(oauthResponse);
+    return await _revokeRefreshToken(oauthResponse);
   }
 
   Future<AuthorizationResponse> _requestAuthorization({
@@ -149,20 +149,6 @@ class TwitterOAuth {
     return OAuthResponse.fromJson(jsonDecode(response.body));
   }
 
-  Future<OAuthResponse> revokeAccessToken(OAuthResponse oauthResponse) async =>
-      await _revokeTokenByType(
-        oauthResponse,
-        'access_token',
-      );
-
-  Future<OAuthResponse> revokeRefreshToken(
-    OAuthResponse oauthResponse,
-  ) async =>
-      await _revokeTokenByType(
-        oauthResponse,
-        'refresh_token',
-      );
-
   Map<String, String> _buildAuthorizationHeader({
     required String clientId,
     required String clientSecret,
@@ -171,6 +157,20 @@ class TwitterOAuth {
 
     return {'Authorization': 'Basic $credentials'};
   }
+
+  Future<OAuthResponse> _revokeAccessToken(OAuthResponse oauthResponse) async =>
+      await _revokeTokenByType(
+        oauthResponse,
+        'access_token',
+      );
+
+  Future<OAuthResponse> _revokeRefreshToken(
+    OAuthResponse oauthResponse,
+  ) async =>
+      await _revokeTokenByType(
+        oauthResponse,
+        'refresh_token',
+      );
 
   Future<OAuthResponse> _revokeTokenByType(
     OAuthResponse oauthResponse,
