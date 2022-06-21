@@ -1,5 +1,5 @@
 import 'package:example/scope.dart';
-import 'package:example/twitter_oauth2.dart';
+import 'package:example/twitter_oauth.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +28,7 @@ class _ExampleState extends State<Example> {
               Text('Refresh Token: $_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
-                  final oauth2 = TwitterOAuth2(
+                  final oauth2 = TwitterOAuth(
                     clientId: 'YOUR_CLIENT_ID',
                     clientSecret: 'YOUR_CLIENT_SECRET',
                     redirectUri: 'org.example.android.oauth://callback/',

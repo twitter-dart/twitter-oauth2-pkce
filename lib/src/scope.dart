@@ -65,4 +65,15 @@ enum Scope {
   final String value;
 
   const Scope(this.value);
+
+  /// Returns the scope associated with the given [value].
+  static Scope toEnum(final String value) {
+    for (final scope in values) {
+      if (scope.value == value) {
+        return scope;
+      }
+    }
+
+    throw ArgumentError('Invalid scope value: $value');
+  }
 }
