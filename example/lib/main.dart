@@ -1,3 +1,7 @@
+// Copyright 2022 Kato Shinya. All rights reserved.
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided the conditions.
+
 import 'package:example/scope.dart';
 import 'package:example/twitter_oauth2_client.dart';
 import 'package:flutter/material.dart';
