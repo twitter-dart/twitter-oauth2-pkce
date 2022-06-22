@@ -1,5 +1,9 @@
+// Copyright 2022 Kato Shinya. All rights reserved.
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided the conditions.
+
 import 'package:example/scope.dart';
-import 'package:example/twitter_oauth.dart';
+import 'package:example/twitter_oauth2_client.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,14 +32,14 @@ class _ExampleState extends State<Example> {
               Text('Refresh Token: $_refreshToken'),
               ElevatedButton(
                 onPressed: () async {
-                  final oauth = TwitterOAuth(
+                  final oauth2 = TwitterOAuth2Client(
                     clientId: 'YOUR_CLIENT_ID',
                     clientSecret: 'YOUR_CLIENT_SECRET',
                     redirectUri: 'org.example.android.oauth://callback/',
                     customUriScheme: 'org.example.android.oauth',
                   );
 
-                  final response = await oauth.executeAuthCodeFlowWithPKCE(
+                  final response = await oauth2.executeAuthCodeFlowWithPKCE(
                     scopes: Scope.values,
                   );
 
