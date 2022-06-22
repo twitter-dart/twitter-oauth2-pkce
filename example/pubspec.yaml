@@ -29,13 +29,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_web_auth: ^0.4.1
-  http: ^0.13.4
+  twitter_oauth2_pkce: ^0.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  cryppo: ^0.2.0
 
 dev_dependencies:
   flutter_test:

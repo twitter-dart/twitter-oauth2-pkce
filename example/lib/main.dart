@@ -2,9 +2,8 @@
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided the conditions.
 
-import 'package:example/scope.dart';
-import 'package:example/twitter_oauth2_client.dart';
 import 'package:flutter/material.dart';
+import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce.dart';
 
 void main() {
   runApp(const MaterialApp(home: Example()));

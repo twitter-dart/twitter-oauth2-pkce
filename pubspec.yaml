@@ -1,6 +1,6 @@
 name: twitter_oauth2_pkce
 description: Provides the easiest way to authenticate with the Twitter API using the OAuth 2.0 PKCE method in Dart and Flutter.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/twitter-dart/twitter-oauth2-pkce
 environment:
   sdk: '>=2.17.0 <3.0.0'
