@@ -4,4 +4,4 @@
 
 export 'package:twitter_oauth2_pkce/src/response/oauth_response.dart';
 export 'package:twitter_oauth2_pkce/src/scope.dart';
-export 'package:twitter_oauth2_pkce/src/twitter_oauth.dart';
+export 'package:twitter_oauth2_pkce/src/twitter_oauth2_client.dart';
