@@ -31,7 +31,9 @@ class OAuthResponse {
   final String accessToken;
 
   /// The refresh token.
-  final String refreshToken;
+  ///
+  /// Issued when `offline.access` is specified in the scope.
+  final String? refreshToken;
 
   /// The authorized scopes.
   final List<Scope> scopes;
