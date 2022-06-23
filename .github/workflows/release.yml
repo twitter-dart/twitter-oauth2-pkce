@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check release validity
+        run: sh .github/scripts/check-release.sh
+      - name: Tweet
+        uses: snow-actions/tweet@v1.2.0
+        with:
+          status: |
+            Hey what's up? 🍿 New version of #twitter_oauth2_pkce was released! 🐦🐦🐦
+            Release note: https://github.com/twitter-dart/twitter-oauth2-pkce/blob/main/CHANGELOG.md
+            #dart #twitter #flutter #FlutterDev #programming #100DaysOfCode #OSS #coding
+            via #GitHub Actions https://github.com/twitter-dart/twitter-oauth2-pkce
+        env:
+          CONSUMER_API_KEY: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          CONSUMER_API_SECRET_KEY: ${{ secrets.TWITTER_CONSUMER_API_SECRET_KEY }}
+          ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
