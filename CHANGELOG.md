@@ -1,5 +1,9 @@
 # Release Note
 
+## v0.3.0
+
+- Exposed `TwitterOAuthException` object. ([#13](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/13))
+
 ## v0.2.0
 
 - Changed the `refreshToken` field in `OAuthResponse` to **nullable**. This is because a refresh token is not issued if `offline.access` is not specified in the scope. ([#10](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/10))
