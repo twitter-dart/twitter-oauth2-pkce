@@ -14,7 +14,7 @@ jobs:
       - name: Check release validity
         run: sh .github/scripts/check-release.sh
       - name: Tweet
-        uses: snow-actions/tweet@v1.2.0
+        uses: snow-actions/tweet@v1.3.0
         with:
           status: |
             Hey what's up? 🍿 New version of #twitter_oauth2_pkce was released! 🐦🐦🐦
