@@ -1,5 +1,9 @@
 # Release Note
 
+## v0.4.0
+
+- Supported the process for Web Browser. ([#28](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/28))
+
 ## v0.3.0
 
 - Exposed `TwitterOAuthException` object. ([#13](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/13))
