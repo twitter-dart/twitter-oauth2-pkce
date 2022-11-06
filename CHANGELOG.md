@@ -1,5 +1,11 @@
 # Release Note
 
+## v0.5.0
+
+- Added scopes for direct message. ([#35](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/35))
+  - `directMessageRead`
+  - `directMessageWrite`
+
 ## v0.4.0
 
 - Supported the process for Web Browser. ([#28](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/28))
