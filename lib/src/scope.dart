@@ -58,8 +58,14 @@ enum Scope {
   /// Get Bookmarked Tweets from an authenticated user.
   bookmarkRead('bookmark.read'),
 
-  /// Bookmark and remove Bookmarks from Tweets
-  bookmarkWrite('bookmark.write');
+  /// Bookmark and remove Bookmarks from Tweets.
+  bookmarkWrite('bookmark.write'),
+
+  /// Get direct messages from an authenticated user.
+  directMessageRead('dm.read'),
+
+  /// Write and remove direct messages.
+  directMessageWrite('dm.write');
 
   /// The scope value
   final String value;
@@ -67,7 +73,7 @@ enum Scope {
   const Scope(this.value);
 
   /// Returns the scope associated with the given [value].
-  static Scope toEnum(final String value) {
+  static Scope valueOf(final String value) {
     for (final scope in values) {
       if (scope.value == value) {
         return scope;
