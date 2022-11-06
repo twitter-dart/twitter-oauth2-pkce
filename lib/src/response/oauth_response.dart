@@ -15,7 +15,8 @@ class OAuthResponse {
     required this.refreshToken,
     required String scopes,
     required int expires,
-  })  : scopes = scopes.split(' ').map((scope) => Scope.toEnum(scope)).toList(),
+  })  : scopes =
+            scopes.split(' ').map((scope) => Scope.valueOf(scope)).toList(),
         expireAt = DateTime.now().add(Duration(seconds: expires));
 
   /// Returns the new instance of [OAuthResponse] from [json].

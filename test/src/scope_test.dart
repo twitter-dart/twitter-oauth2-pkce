@@ -28,5 +28,7 @@ void main() {
     expect(Scope.blockWrite.value, 'block.write');
     expect(Scope.bookmarkRead.value, 'bookmark.read');
     expect(Scope.bookmarkWrite.value, 'bookmark.write');
+    expect(Scope.directMessageRead.value, 'dm.read');
+    expect(Scope.directMessageWrite.value, 'dm.write');
   });
 }
