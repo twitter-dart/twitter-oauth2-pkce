@@ -37,6 +37,7 @@
     - [1.1.3. Setup](#113-setup)
       - [1.1.3.1. Android](#1131-android)
       - [1.1.3.2. iOS](#1132-ios)
+      - [1.1.3.3. Web](#1133-web)
     - [1.1.4. Implementation](#114-implementation)
   - [1.2. Upgrading from previous versions (< 1.0.0)](#12-upgrading-from-previous-versions--100)
   - [1.3. Contribution 🏆](#13-contribution-)
@@ -116,6 +117,14 @@ On iOS you need to set the platform in the ***ios/Podfile*** file:
 platform :ios, '11.0'
 ```
 
+#### 1.1.3.3. Web
+
+Currently, official Twitter does not support `CORS`, so this package also does not actively support `Flutter for Web`. However, this package can be used from a web app, and indeed has built-in processing for `Flutter for Web`.
+
+The implementation method for using this package is the same as for `Android` and `iOS` above, but it's necessary to separately create HTML for the destination to be redirected to after authentication.
+
+Detailed instructions can be found in the [`README of the flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2#web) package.
+
 ### 1.1.4. Implementation
 
 Now all that's left is to launch the following example Flutter app and press the button to start the approval process with **OAuth 2.0 PKCE**!
@@ -184,7 +193,7 @@ Version `1.0.0` introduced some breaking changes that need to be addressed if yo
 
 Please take note of the following:
 
-- From version 3.0.0, `flutter_web_auth` has been replaced by [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2). Please refer to the [upgrade instructions](https://pub.dev/packages/flutter_web_auth_2#upgrading-from-flutter_web_auth).
+- From version 1.0.0, `flutter_web_auth` has been replaced by [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2). Please refer to the [upgrade instructions](https://pub.dev/packages/flutter_web_auth_2#upgrading-from-flutter_web_auth).
 - The migration to [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2) marks the transition to `Flutter 3`. This means that you must upgrade to `Flutter 3` (a simple `flutter upgrade` should be enough).
 
 ## 1.3. Contribution 🏆

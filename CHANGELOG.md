@@ -1,5 +1,9 @@
 # Release Note
 
+## v1.0.0
+
+- Just release `v1.0.0`.
+
 ## v1.0.0-preview
 
 Version `1.0.0` introduced some breaking changes that need to be addressed if you are upgrading from previous versions.
