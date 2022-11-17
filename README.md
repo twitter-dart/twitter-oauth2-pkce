@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/twitter-dart/twitter-oauth2-pkce">
-    <img alt="twitter_oauth2_pkce" width="500px" src="https://user-images.githubusercontent.com/13072231/173230433-e1d341e5-5857-4568-ba3b-fdef86df9d27.png">
+    <img alt="twitter_oauth2_pkce" width="500px" src="https://user-images.githubusercontent.com/13072231/202325611-78d7a154-2717-4c8b-9784-83c5a664a8e6.png">
   </a>
 </p>
 
 <p align="center">
-  <b>The Optimized and Easiest Way to Authenticate with OAuth 2.0 PKCE for Twitter API 🐦</b>
+  <b>The Optimized and Easiest Way to Integrate OAuth 2.0 PKCE with Twitter API in Flutter 🐦</b>
 </p>
 
 ---
@@ -18,7 +18,6 @@
 [![Dart SDK Version](https://badgen.net/pub/sdk-version/twitter_oauth2_pkce)](https://pub.dev/packages/twitter_oauth2_pkce/)
 [![Test](https://github.com/twitter-dart/twitter-oauth2-pkce/actions/workflows/test.yml/badge.svg)](https://github.com/twitter-dart/twitter-oauth2-pkce/actions/workflows/test.yml)
 [![Analyzer](https://github.com/twitter-dart/twitter-oauth2-pkce/actions/workflows/analyzer.yml/badge.svg)](https://github.com/twitter-dart/twitter-oauth2-pkce/actions/workflows/analyzer.yml)
-[![codecov](https://codecov.io/gh/twitter-dart/twitter-oauth2-pkce/branch/main/graph/badge.svg?token=J5GT1PF9Y3)](https://codecov.io/gh/twitter-dart/twitter-oauth2-pkce)
 [![Issues](https://img.shields.io/github/issues/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce/pulls)
 [![Stars](https://img.shields.io/github/stars/twitter-dart/twitter-oauth2-pkce?logo=github&logoColor=white)](https://github.com/twitter-dart/twitter-oauth2-pkce)
@@ -39,10 +38,11 @@
       - [1.1.3.1. Android](#1131-android)
       - [1.1.3.2. iOS](#1132-ios)
     - [1.1.4. Implementation](#114-implementation)
-  - [1.2. Contribution 🏆](#12-contribution-)
-  - [1.3. Support ❤️](#13-support-️)
-  - [1.4. License 🔑](#14-license-)
-  - [1.5. More Information 🧐](#15-more-information-)
+  - [1.2. Upgrading from previous versions (< 1.0.0)](#12-upgrading-from-previous-versions--100)
+  - [1.3. Contribution 🏆](#13-contribution-)
+  - [1.4. Support ❤️](#14-support-️)
+  - [1.5. License 🔑](#15-license-)
+  - [1.6. More Information 🧐](#16-more-information-)
 
 <!-- /TOC -->
 
@@ -73,7 +73,7 @@ We recommend using this library in combination with the **[twitter_api_v2](https
 ### 1.1.2. Import
 
 ```dart
-import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce';
+import 'package:twitter_oauth2_pkce/twitter_oauth2_pkce.dart';
 ```
 
 ### 1.1.3. Setup
@@ -96,8 +96,8 @@ defaultConfig {
 Also it's necessary to add the following definitions to `AndroidManifest.xml`.
 
 ```xml
-<activity android:name="com.linusu.flutter_web_auth.CallbackActivity" android:exported="true">
-    <intent-filter android:label="flutter_web_auth">
+<activity android:name="com.linusu.flutter_web_auth_2.CallbackActivity" android:exported="true">
+    <intent-filter android:label="flutter_web_auth_2">
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
@@ -178,7 +178,16 @@ class _ExampleState extends State<Example> {
 }
 ```
 
-## 1.2. Contribution 🏆
+## 1.2. Upgrading from previous versions (< 1.0.0)
+
+Version `1.0.0` introduced some breaking changes that need to be addressed if you are upgrading from previous versions.
+
+Please take note of the following:
+
+- From version 3.0.0, `flutter_web_auth` has been replaced by [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2). Please refer to the [upgrade instructions](https://pub.dev/packages/flutter_web_auth_2#upgrading-from-flutter_web_auth).
+- The migration to [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2) marks the transition to `Flutter 3`. This means that you must upgrade to `Flutter 3` (a simple `flutter upgrade` should be enough).
+
+## 1.3. Contribution 🏆
 
 If you would like to contribute to `twitter-oauth2-pkce`, please create an [issue](https://github.com/twitter-dart/twitter-oauth2-pkce/issues) or create a Pull Request.
 
@@ -199,7 +208,7 @@ Or you can create a [discussion](https://github.com/twitter-dart/twitter-oauth2-
 
 **Feel free to join this development, diverse opinions make software better!**
 
-## 1.3. Support ❤️
+## 1.4. Support ❤️
 
 The simplest way to show us your support is by **giving the project a star** at [GitHub](https://github.com/twitter-dart/twitter-oauth2-pkce) and [Pub.dev](https://pub.dev/packages/twitter_oauth2_pkce).
 
@@ -213,7 +222,7 @@ You can also support this project by **becoming a sponsor** on GitHub:
   </p>
 </div>
 
-## 1.4. License 🔑
+## 1.5. License 🔑
 
 All resources of `twitter_oauth2_pkce` is provided under the `BSD-3` license.
 
@@ -222,7 +231,7 @@ All resources of `twitter_oauth2_pkce` is provided under the `BSD-3` license.
 > **Note**</br>
 > License notices in the source are strictly validated based on `.github/header-checker-lint.yml`. Please check [header-checker-lint.yml](https://github.com/twitter-dart/twitter-oauth2-pkce/tree/main/.github/header-checker-lint.yml) for the permitted standards.
 
-## 1.5. More Information 🧐
+## 1.6. More Information 🧐
 
 `twitter_oauth2_pkce` was designed and implemented by **_Kato Shinya ([@myConsciousness](https://github.com/myConsciousness))_**.
 
