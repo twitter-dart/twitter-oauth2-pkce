@@ -48,7 +48,7 @@
 
 # 1. Guide 🌎
 
-This library provides the easiest way to authenticate with [OAuth 2.0 PKCE](https://developer.twitter.com/en/docs/authentication/oauth-2-0/authorization-code) for [Twitter API](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/introduction) in **Dart** and **Flutter** apps.
+This library provides the easiest way to authenticate with [OAuth 2.0 PKCE](https://developer.twitter.com/en/docs/authentication/oauth-2-0/authorization-code) for [Twitter API](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/introduction) in **Flutter** apps.
 
 **Show some ❤️ and star the repo to support the project.**
 
