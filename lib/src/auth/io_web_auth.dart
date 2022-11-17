@@ -3,7 +3,7 @@
 // modification, are permitted provided the conditions.
 
 // Package imports:
-import 'package:flutter_web_auth/flutter_web_auth.dart';
+import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 
 // Project imports:
 import 'base_web_auth.dart';
@@ -17,7 +17,7 @@ class IoWebAuth implements BaseWebAuth {
     required Uri uri,
     required String redirectUrl,
   }) async =>
-      await FlutterWebAuth.authenticate(
+      await FlutterWebAuth2.authenticate(
         callbackUrlScheme: callbackUrlScheme,
         url: uri.toString(),
       );

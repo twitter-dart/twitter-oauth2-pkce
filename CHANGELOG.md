@@ -1,5 +1,14 @@
 # Release Note
 
+## v1.0.0-preview
+
+Version `1.0.0` introduced some breaking changes that need to be addressed if you are upgrading from previous versions.
+
+Please take note of the following:
+
+- From version 3.0.0, `flutter_web_auth` has been replaced by [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2). Please refer to the [upgrade instructions](https://pub.dev/packages/flutter_web_auth_2#upgrading-from-flutter_web_auth).
+- The migration to [`flutter_web_auth_2`](https://pub.dev/packages/flutter_web_auth_2) marks the transition to `Flutter 3`. This means that you must upgrade to `Flutter 3` (a simple `flutter upgrade` should be enough).
+
 ## v0.5.0
 
 - Added scopes for direct message. ([#35](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/35))
