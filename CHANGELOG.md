@@ -1,5 +1,9 @@
 # Release Note
 
+## v1.0.1
+
+- Fixed a bug where `TwitterOAuthException` did not implement `Exception`. ([#50](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/50))
+
 ## v1.0.0
 
 - Just release `v1.0.0`.
