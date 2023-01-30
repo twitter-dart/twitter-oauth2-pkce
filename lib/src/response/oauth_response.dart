@@ -23,7 +23,7 @@ class OAuthResponse {
   factory OAuthResponse.fromJson(final Map<String, dynamic> json) =>
       OAuthResponse._(
         accessToken: json['access_token'],
-        refreshToken: json['refresh_token'],
+        refreshToken: json['refresh_token'] ?? '',
         scopes: json['scope'],
         expires: json['expires_in'],
       );
