@@ -1,5 +1,9 @@
 # Release Note
 
+## v1.0.2
+
+- Fixed so that the refresh token is always set to an empty string if the `offline.access` scope is not specified. ([#63](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/63))
+
 ## v1.0.1
 
 - Fixed a bug where `TwitterOAuthException` did not implement `Exception`. ([#50](https://github.com/twitter-dart/twitter-oauth2-pkce/issues/50))
