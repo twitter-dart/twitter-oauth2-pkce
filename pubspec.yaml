@@ -10,9 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.5
-  crypto: ^3.0.2
-  flutter_web_auth_2: ^2.0.4
+  http: ^0.13.6
+  crypto: ^3.0.3
+  flutter_web_auth_2: ^2.1.4
 
 dev_dependencies:
   flutter_test:
